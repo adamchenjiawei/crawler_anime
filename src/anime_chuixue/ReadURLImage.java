@@ -91,7 +91,7 @@ public class ReadURLImage {
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		String anime_name = "即使如此我还是喜欢你";
-		String sql ="select * from chapters c join anime_images as a on c.id = a.`chapter_id`  where anime_name = '"+anime_name+"' and position >= 269 order by position asc";
+		String sql ="select * from chapters c join anime_images as a on c.id = a.`chapter_id`  where anime_name = '"+anime_name+"' and position >= 1 order by position asc";
 		List<AnimeImage> templateQuery = null;
 		templateQuery = JdbcTemplate.templateQuery(sql, new ChapterJoinAnimeImageResultSetHandler());
 		System.out.println(templateQuery.size());
